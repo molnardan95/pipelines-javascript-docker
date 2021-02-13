@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: molnardanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: molnardanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: molnardanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: molnardanpipelinesjavascriptdocker 
+          image: molnadaaksregistry.azurecr.io/molnardanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
